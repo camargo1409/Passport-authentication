@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/auth.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div class="main">
+            <div class="panel">
+                <h1>Login</h1>
+                <form action="/login" method="POST">
+                    <input placeholder="Enter with your username" type="text" name="username" type="text">
+                    <input placeholder="Enter with your password" type="password" name="password" type="text">
+                    <button type="submit">SignIn</button>
+                    <a href="/register">Does not have an account ? SignUp!</a>
+                    <% if(messages.error){ %>
+                        <div class="msg_error">
+                            <%= messages.error%>
+                        </div>
+                    <% } %>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

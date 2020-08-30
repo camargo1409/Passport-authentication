@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/auth.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div class="main">
+            <div class="panel">
+                <h1>Register</h1>
+                <form action="/register" method="POST">
+                    <input placeholder="Enter with your username" name="username" type="text">
+                    <input placeholder="Enter with your email addess" name="email" type="email">
+                    <input placeholder="Enter with your password" name="password" type="password">
+                    <button type="submit">Register</button>
+                    <a href="/login">Do you already have an account ? SignIn!</a>
+                    <% if(locals.msg_error) {%>
+                        <div class="msg_error">
+                            <%= locals.msg_error  %>
+                        </div>
+                    <%}%>    
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
